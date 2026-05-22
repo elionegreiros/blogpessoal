@@ -1,0 +1,101 @@
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: Arial, sans-serif;
+  background: #0f0f0f;
+  color: #f5f5f5;
+}
+
+/* Header com efeito vidro */
+header {
+  background: rgba(26, 26, 26, 0.6);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+header h1 { color: #00ff88; }
+header p { color: #aaa; }
+header nav { margin-top: 10px; }
+header nav a {
+  margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+}
+header nav a:hover { color: #00ff88; }
+
+/* Layout principal */
+.container {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Cards */
+.posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+.card {
+  background: rgba(30, 30, 30, 0.7);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s, filter 0.3s;
+}
+.card:hover {
+  transform: scale(1.03);
+  filter: brightness(1.1);
+}
+.card img { width: 100%; }
+.card-content { padding: 15px; }
+.card h3 { color: #00ff88; margin-bottom: 10px; }
+.btn {
+  display: inline-block;
+  background: #00ff88;
+  color: #000;
+  padding: 8px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+.btn:hover { background: #00cc66; }
+
+/* Aside com blur */
+aside {
+  background: rgba(26, 26, 26, 0.6);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  padding: 20px;
+  border-radius: 8px;
+}
+aside h3 { color: #00ff88; margin-bottom: 10px; }
+aside ul { list-style: none; }
+aside li { margin-bottom: 8px; }
+.banner {
+  background: rgba(0, 255, 136, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  text-align: center;
+  padding: 15px;
+  color: #aaa;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container { grid-template-columns: 1fr; }
+}
